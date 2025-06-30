@@ -3,8 +3,10 @@ import BirthdayScreen from './BirthdayScreen'
 import './App.css'
 import glitchSound from './assets/glitch.wav'
 import superglitch from './assets/superglitch.wav'
+import PoemReveal from './PoemReveal'
 
 export default function App() {
+  const [unlockedPoem, setUnlockedPoem] = useState(false)
   const [input, setInput] = useState('')
   const [activated, setActivated] = useState(false)
   const [error, setError] = useState(false)
@@ -17,25 +19,30 @@ export default function App() {
 
 
   const hints = [
-    'you dislike this',
     'I like this',
     'it is a single word',
     'it is comprised of 6 letters',
     'you sux at this',
+    'I am known for this',
     'get good',
     'it starts with the letter p',
-    'waht the hell',
+    'lightlessspeare is the greatest',
     'cmon it isnt tha hard yk',
-    'you ll learn this in the future',
-    'm not paid enuf to give so many hints'
+    'you kinda know this'
   ]
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const userGuess = input.trim().toLowerCase()
+    
+    
     if (userGuess === secretCode) {
       setActivated(true)
     } else {
+      if (userGuess === 'poetry') {
+          setUnlockedPoem(true)
+        }else
+       {
       audio.play()
       const newAttempts = attempts + 1
       setAttempts(newAttempts)
@@ -43,8 +50,8 @@ export default function App() {
       if (newAttempts >= 10) {
         setIsRaging(true)
         audio2.play()
-        setTimeout(() => setIsRaging(false), 300)
-  }
+        setTimeout(() => setIsRaging(false), 300)}
+  
 
       if (newAttempts === 10) {
         setHint("sigh was it so hard to guess? it's jus a language name")
@@ -62,11 +69,12 @@ export default function App() {
       }
 
       setTimeout(() => setError(false), 2000)
-    }
+    }}
     setInput('')
   }
 
   if (activated) return <BirthdayScreen />
+  if (unlockedPoem) return <PoemReveal />
 
   return (
   <div className={`math-solver ${isRaging ? 'rage-mode' : ''}`}>
