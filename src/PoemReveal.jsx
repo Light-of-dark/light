@@ -21,7 +21,7 @@ const PoemReveal = () => {
       
       <TypeAnimation
         sequence={[`
-Cool as a freezer, sharp as her grades,\nShe studies like tests power her upgrades.\nA student so perfect, it's almost a sin—\non Insta? Chaos. Let the madness begin.\n\nShe’s the Ice Princess, and don’t forget,\nPrincess means spoiled—consider that a threat.\nApproach with caution, don’t be blind—\nShe’s got sarcasm and many gangs combined.\n\nShe’s smart enough to win everything\nbefore they can even start,\nAnd smooth enough to make it seem like nothing.\nCollects medals and mementos like it's a mart.\n\nShe likes attention but pretends she doesn’t care,\nSo here’s your attention, perfectly rare.\nMay your cool never melt and your glow never dim—\nYour minions hath abided you for a year, and shall again do it, Highness Ice Princess, on a royal whim.\n\nHappy Birthday
+Cool as a freezer, sharp as her grades,\nShe studies like tests power her upgrades.\nA student so perfect, it's almost a sin—\non Insta? Chaos. Let the madness begin.\n\nShe’s the Ice Princess, and don’t forget,\nPrincess means spoiled—consider that a threat.\nApproach with caution, don’t be blind—\nShe’s got sarcasm and many gangs combined.\n\nShe’s smart enough to win everything\nbefore they can even start,\nAnd smooth enough to make it seem like nothing.\nCollects medals and mementos like it's a mart.\n\nShe likes attention but pretends she doesn’t care,\nSo here’s your attention, perfectly rare.\nMay your cool never melt and your glow never dim—\nThy hath abided you for a year, and shall again do it, Highness Ice Princess, on a royal whim.\n\nHappy Birthday
 `, 1000]}
         wrapper="pre"
         speed={10}

@@ -23,12 +23,12 @@ export default function App() {
     'it is a single word',
     'it is comprised of 6 letters',
     'you sux at this',
-    'I am known for this',
+    'I know this well',
     'get good',
     'it starts with the letter p',
     'lightlessspeare is the greatest',
     'cmon it isnt tha hard yk',
-    'you kinda know this'
+    'hmmmmmm'
   ]
 
   const handleSubmit = (e) => {
@@ -49,19 +49,21 @@ export default function App() {
       setError(true)
       if (newAttempts >= 10) {
         setIsRaging(true)
+        audio2.volume = 0.1
+        audio.volume = 0.1
         audio2.play()
         setTimeout(() => setIsRaging(false), 300)}
   
 
       if (newAttempts === 10) {
-        setHint("sigh was it so hard to guess? it's jus a language name")
+        setHint("sigh is it so hard to guess? it's jus a language name")
       } else if (newAttempts === 15) {
-        setHint('OMG ITS JUST PYTHON')
+        setHint('OMG GUESS IT RiGHT ALREADY')
       } else if (newAttempts === 16) {
-        setHint('HOW DID YOU GET IT WRONG I TOLD YOU ITS PYTHON')
+        setHint('UH ICE PRINCESS Y U SO BAD AT THIS')
       }
-        else if (newAttempts >= 17) {
-        setHint('daMN YOU PLAYing around nothing better to do? nothing more than this')
+        else if (newAttempts === 20) {
+        setHint('go study you dont have time to play around')
         
       } else {
         const randomHint = hints[Math.floor(Math.random() * hints.length)]
